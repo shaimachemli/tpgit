@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pay.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Ajoutez ce lien dans l'en-tête de votre document HTML -->
+   <!-- Inclure la bibliothèque Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <style>
+      .section .cart {margin-top: 500px;}
+    </style>
+</head>
+
+<body>
+    <header class="header">
+
+        <a href="#" class="logo">
+            <img src="images/SH (1).png" alt="">
+        </a>
+
+        <nav class="navbar">
+            <a href="index.html">Accueil</a>
+            <a href="#">À propos</a>
+            <a href="#">produits</a>
+            <a href="#">Contactez-nous</a>
+            
+           
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-user" id="login-btn"></div>
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+        <form action="" class="login-form">
+            <h3>login now</h3>
+            <input type="email" placeholder="your email" class="box">
+            <input type="password" placeholder="your password" class="box">
+            <p onclick="mon_compte()" class="menuele">don't have an account <a href="#">Sign up here</a></p>
+            <input type="submit" value="login now" class="btn">
+            <p class="log">Log in with</p>
+            <div class="icons">
+                <a href="#">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-skype"></i>
+                </a>
+            </div>
+          </form>
+
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </div>
+    </header>
+    <section class="pay">
+    <div class="wrapper">
+        <h2>Formulaire de Paiement</h2>
+        <form action="" method="post">
+
+            <!-- Informations du compte Début -->
+            <!-- Incluez vos champs d'informations de compte ici -->
+            <!-- Informations du compte Fin -->
+
+            <!-- Date de naissance et Genre Début -->
+            <!-- Incluez vos champs de date de naissance et de genre ici -->
+            <!-- Date de naissance et Genre Fin -->
+
+            <!-- Détails de paiement Début -->
+            <h4>Détails de Paiement</h4>
+           
+            <!-- Détails de la carte de crédit -->
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="tel" name="" class="name" placeholder="Numéro de Carte 1111-2222-3333-4444" required>
+                    <i class="fa fa-credit-card icon"></i>
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="tel" name="" class="name" placeholder="CVC de la Carte 632" required>
+                    <i class="fa fa-user icon"></i>
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    <div class="input_box">
+                        <input type="number" placeholder="Mois d'Expiration" required class="name">
+                        <i class="fa fa-calendar icon" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="input_box">
+                    <input type="number" placeholder="Année d'Expiration" required class="name">
+                    <i class="fa fa-calendar-o icon" aria-hidden="true"></i>
+                </div>
+            </div>
+
+            <!-- Bouton PayPal -->
+            <div id="paypal-payment-button"></div>
+
+            <!-- Montant -->
+            <div class="input_box">
+                <input type="number" placeholder="Montant à Payer" required class="name">
+                <i class="fa fa-money icon" aria-hidden="true"></i>
+            </div>
+
+            <!-- Détails de Paiement Fin -->
+
+            <div class="input_group">
+                <div class="input_box">
+                    <button type="submit">PAYER MAINTENANT</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</section>
+
+    <!-- Script PayPal SDK -->
+    <script src="https://www.paypal.com/sdk/js?client-id=ASsRqeQiHXQHha_h5wlujvhmWvZDPC_V-Bj3E3dhy17Qq6JSN3T9wYyxn74fdbrO0w_HLt6CaPM0vQQW&currency=EUR"></script>
+    <script>
+        paypal.Buttons({
+    
+    createOrder: function(data, actions) {
+        return actions.order.create({
+            purchase_units:[{
+              amount: {
+                  value:'0.10'
+              }
+            }]
+        })
+    },
+    onApprove: function(data, actions) {
+        // This function captures the funds from the transaction.
+        return actions.order.capture().then(function(details) {
+            alert("Transaction OK : "+details.payer.name.given_name);
+        })
+    }
+}).render('#paypal-payment-button');
+
+    </script>
+</body>
+
+</html>

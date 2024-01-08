@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon compte</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Ajoutez ce lien dans l'en-tête de votre document HTML -->
+   <!-- Inclure la bibliothèque Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <style>
+      .section .cart {margin-top: 500px;}
+    </style>
+</head>
+
+<body>
+    <header class="header">
+
+        <a href="#" class="logo">
+            <img src="images/SH (1).png" alt="">
+        </a>
+
+        <nav class="navbar">
+            <a href="#">Accueil</a>
+            <a href="#">À propos</a>
+            <a href="#">produits</a>
+            <a href="#">Contactez-nous</a>
+            
+           
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-user" id="login-btn"></div>
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+        <form action="" class="login-form">
+            <h3>login now</h3>
+            <input type="email" placeholder="your email" class="box">
+            <input type="password" placeholder="your password" class="box">
+            <p onclick="mon_compte()" class="menuele">don't have an account <a href="#">Sign up here</a></p>
+            <input type="submit" value="login now" class="btn">
+            <p class="log">Log in with</p>
+            <div class="icons">
+                <a href="#">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-skype"></i>
+                </a>
+            </div>
+          </form>
+
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </div>
+    </header>
+      <!-- Cart Items -->
+      <section class="cart">
+    <div class="container cart">
+        <table>
+          <tr>
+            <th>Produit</th>
+            <th>Quantite</th>
+            <th>SubTotal</th>
+          </tr>
+          <tr>
+            <td>
+              <div class="cart-info">
+                <img src="images/par.jpg" alt="" />
+                <div>
+                  <p>JPG</p>
+                
+                  <a href="#">Supprimer</a>
+                </div>
+              </div>
+            </td>
+            <td><input type="number" value="1" min="1" /></td>
+            <td>260,000 TND</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="cart-info">
+                <img src="images/par2.jpg" alt="" />
+                <div>
+                  <p>RABANNE</p>
+                  
+                  <a href="#">Supprimer</a>
+                </div>
+              </div>
+            </td>
+            <td><input type="number" value="1" min="1" /></td>
+            <td>287,000 TND</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="cart-info">
+                <img src="images/pr3.jpg" alt="" />
+                <div>
+                  <p>CAROLINA HERRERA</p>
+                 
+                  <a href="#">remove</a>
+                </div>
+              </div>
+            </td>
+            <td><input type="number" value="1" min="1" /></td>
+            <td>481,000 TND</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="cart-info">
+                <img src="images/par4.jpg" alt="" />
+                <div>
+                  <p>MAYBELLINE</p>
+                  
+                  <a href="#">Supprimer</a>
+                </div>
+              </div>
+            </td>
+            <td><input type="number" value="1" min="1" /></td>
+            <td>58,000 TND</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="cart-info">
+                <img src="images/pr2.jpg " alt="" />
+                <div>
+                  <p>CLINIQUE</p>
+                  
+                  <a href="#">Supprimer</a>
+                </div>
+              </div>
+            </td>
+            <td><input type="number" value="1" min="1" /></td>
+            <td>118,000 TND</td>
+          </tr>
+        </table>
+        <div class="total-price">
+          <table>
+            <tr>
+              <td>Subtotal</td>
+              <td>430.000TND</td>
+            </tr>
+            <tr>
+              <td>Tax</td>
+              <td>50.000TND</td>
+            </tr>
+            <tr>
+              <td>Total</td>
+              <td>480.000TND</td>
+            </tr>
+          </table>
+          <a href="payer.html" class="checkout btn">Payer</a>
+        </div>
+      </div></section>
+  
+      
+      

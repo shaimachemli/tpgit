@@ -1,0 +1,54 @@
+/* Ajoutez ces styles à votre feuille de style existante */
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    background-color: gainsboro; /* Pour espacer les blocs uniformément sur la ligne */
+  }
+  
+  .theme-block.icon {
+    flex: 1; /* Chaque bloc occupe une fraction égale de l'espace disponible */
+    max-width: 300px; /* Ajustez selon vos besoins */
+    margin-right: 10px; /* Espacement entre les blocs */
+  }
+  
+  .block-link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background-color: gainsboro;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    color: black;
+  }
+  
+
+  .block-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: black;
+  }
+  
+  .block-description {
+    font-size: 14px;
+  }
+  
+  .icon i {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color:#ff3fa5 ;
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .theme-block.icon {
+      margin-right: 0; /* Supprime l'espacement entre les blocs sur les petits écrans */
+    }
+  }
+  

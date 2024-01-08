@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty</title>
+   
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Ajoutez ce lien dans l'en-tête de votre document HTML -->
+   <!-- Inclure la bibliothèque Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/car.css">
+
+    <style>
+        
+        .box {
+            margin: 0 15px; /* Espacement entre les produits */
+        }
+        
+        .carousel-container {
+            width: 100%; /* Occupe 100% de la largeur de la page */
+            margin-top: 94px;
+            
+        }
+
+        .carousel-slide img {
+            width: 100%; /* Les images occupent 100% de la largeur du conteneur */
+            height: auto;
+        }
+        .title-container {
+            text-align: center;
+            position: relative;
+        }
+
+        .title-container h1 {
+            display: inline-block;
+            background-color: white; /* Couleur de fond pour couvrir les lignes */
+            position: relative;
+            z-index: 2;
+            padding: 0 10px; /* Ajustez la marge intérieure selon vos besoins */
+        }
+
+        .title-container::before,
+        .title-container::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 50%;
+            height: 1px;
+            background-color: black;
+            transform: translateY(-50%);
+        }
+
+        .title-container::before {
+            left: 0;
+        }
+
+        .title-container::after {
+            right: 0;
+        }
+    
+ 
+    </style>
+
+</head>
+
+<body>
+   
+  
+    <!-- header section starts  -->
+
+    <header class="header">
+
+        <a href="#" class="logo">
+            <img src="images/SH (1).png" alt="">
+        </a>
+
+        <nav class="navbar">
+            <a href="#home">Accueil</a>
+            <a href="#about">À propos</a>
+            
+            <a href="#products">Produits</a>
+           
+            <a href="#contact">Contactez-nous</a>
+            
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+            <a href="voirpanier.html" id="cart-btn">
+            <div class="fas fa-shopping-cart" id="cart-btn"></div></a>
+            <div class="fas fa-user" id="login-btn"></div>
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+        <form action="" class="login-form">
+            <h3>login now</h3>
+            <input type="email" placeholder="your email" class="box">
+            <input type="password" placeholder="your password" class="box">
+            <p onclick="mon_compte()" class="menuele">don't have an account <a href="#">Sign up here</a></p>
+            <input type="submit" value="login now" class="btn">
+            <p class="log">Log in with</p>
+            <div class="icons">
+                <a href="#">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+                <a href="#">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+                <a href="#">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+                <a href="#">
+                    <ion-icon name="logo-google"></ion-icon>
+                </a>
+                <a href="#">
+                    <ion-icon name="logo-skype"></ion-icon>
+                </a>
+            </div>
+          </form>
+
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </div>
+
+     
+    </header>
+    
+
+    <!-- header section ends -->
+   
+
+
+        
+
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="images/p1.jpg" alt="Image 1" style="width: 100%;">
+            </div>
+            <div class="carousel-slide">
+                <img src="images/p5.jpg" alt="Image 2" style="width: 100%;">
+            </div>
+            <div class="carousel-slide">
+                <img src="images/p3.jpg" alt="Image 3" style="width: 100%;">
+            </div>
+        </div>
+    
+    <!-- home section starts  -->
+
+    <section class="home" id="home">
+
+        <div class="content">
+            <h3>Online Cosmetics Shop Website</h3>
+            <p>L’ÉLÉGANCE EST LA SEULE BEAUTÉ QUI NE SE FANE JAMAIS</p>
+            <a href="#" class="btn">Commander maintenant</a>
+        </div>
+
+    </section>
+
+    <!-- home section ends -->
+
+    <!-- about section starts  -->
+
+    <section class="about" id="about">
+
+        <h1 class="heading"> <span>À </span> propos </h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="images/son-kem-ysl-425-2.png" alt="">
+            </div>
+
+            <div class="content">
+                <h3>Bienvenue dans le monde de la beauté inspirée. </h3>
+                <p>Chez SH Cosmetiques nous croyons en la beauté authentique et en la puissance des produits cosmétiques qui célèbrent la diversité et renforcent la confiance en soi. Notre histoire commence par une passion commune pour l'innovation dans l'industrie des cosmétiques et le désir de créer des produits qui transcendent les attentes.
+                </p>
+                <p>Merci de faire partie de notre histoire et de choisir SH Cosmetiques pour votre voyage beauté. Nous sommes impatients de continuer à grandir, innover et célébrer la beauté avec vous.</p>
+                <a href="#" class="btn">lire plus</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- about section ends -->
+    <div class="messageliv">
+        <marquee   scrollamount="10" direction="right" behavior="alternate"  font-weight=bold loop="10" width="auto" height="50">Promotion jusqu'au 30 décembre 2023</marquee>
+    </div>
+    
+    
+    
+    <section class="products" id="products">
+
+
+        <h1 class="heading"> Nos <span>produits</span> </h1>
+
+        <div class="box-container carousel">
+           
+            <div class="box" id="produit1">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="cardimg">
+                    <img src="images/pr2.jpg" alt="" >
+                </div>
+                <div class="card">
+                    <h3 class="cardtitle" >CLINIQUE</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h2>CLINIQUE GEL HYDRATANT...</h2>
+                    <div class="cardpx"><b>118,000 TND</b> </div>
+                    <button class="cardbottom" onclick="ajouterAuPanierEtRediriger(this)">Ajouter au panier</button>
+                </div>
+            </div>
+            <div class="box" id="produit2">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="cardimg">
+                    <img src="images/par.jpg" alt="" >
+                </div>
+                <div class="card">
+                    <h3 class="cardtitle" >JPG</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h2>JPG GAULTIER DIVINE EAU DE...</h2>
+                    <div class="cardpx"><b>260,000 TND</b> </div>
+                    <button class="cardbottom"  onclick="ajouterAuPanierEtRediriger(this)">Ajouter au panier</button>
+                </div>
+            </div>
+            <div class="box" id="produit3">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="cardimg">
+                    <img src="images/par2.jpg" alt="" >
+                </div>
+                <div class="card">
+                    <h3 class="cardtitle" >RABANNE</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h2>RABANNE PHANTOM LE PARFUM...</h2>
+                    <div class="cardpx"><b>287,000 TND</b> </div>
+                    <button class="cardbottom" onclick="ajouterAuPanierEtRediriger(this)">Ajouter au panier</button>
+                </div>
+            </div>
+            <div class="box" id="produit4">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="cardimg">
+                    <img src="images/par3.jpg" alt="" >
+                </div>
+                <div class="card">
+                    <h3 class="cardtitle" >CAROLINA HERRERA</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h2>CAROLINA HERRERA GOOD GIRL...</h2>
+                    <div class="cardpx"><b>481,000 TND</b> </div>
+                    <button class="cardbottom" onclick="ajouterAuPanierEtRediriger(this)">Ajouter au panier</button>
+                </div>
+            </div>
+            <div class="box" id="produit5">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="cardimg">
+                    <img src="images/par4.jpg" alt="" >
+                </div>
+                <div class="card">
+                    <h3 class="cardtitle" >MAYBELLINE</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h2>MAYBELLINE SKY HIGH...</h2>
+                    <div class="cardpx"><b>58,000 TND</b> </div>
+                    <button class="cardbottom" onclick="ajouterAuPanierEtRediriger(this)">Ajouter au panier</button>
+                </div>
+            </div>
+            <div class="box" id="produit6">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="cardimg">
+                    <img src="images/par5.jpg" alt="" >
+                </div>
+                <div class="card">
+                    <h3 class="cardtitle" >PROFUSION</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h2> PROFUSION BLUSH III TEINT</h2>
+                    <div class="cardpx"><b>38,000 TND</b> </div>
+                    <button class="cardbottom" onclick="ajouterAuPanierEtRediriger(this)">Ajouter au panier</button>
+                </div>
+            </div>
+            <div class="box" id="produit7">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="cardimg">
+                    <img src="images/pr3.jpg" alt="" >
+                </div>
+                <div class="card">
+                    <h3 class="cardtitle" >LANCÔME</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h2> LANCÔME HYDRAZEN COFFRETS</h2>
+                    <div class="cardpx"><b>217,000 TND</b> </div>
+                    <button class="cardbottom"  onclick="ajouterAuPanierEtRediriger(this)">Ajouter au panier</button>
+                </div>
+            </div>
+            
+            
+        </div>
+        <script>
+    
+    </script>
+
+
+    </section>
+    <button id="voirPanierBtn" onclick="redirigerVersVoirPanier()"> Voir panier </button> 
+    <!--le tableau de recuperation des articles ajoutés dans le panier il est invisible--> 
+   <table id="myTable">
+    <tr>
+      <th>Article</th>
+      <th>Prix</th>
+      <th>Image</th>
+    </tr>
+  </table>
+
+ 
+    <!-- contact section starts  -->
+
+    <section class="contact" id="contact">
+
+        <h1 class="heading"> <span>Contactez</span> Nous </h1>
+
+        <div class="row">
+
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51757.44262913732!2d10.576854675609694!3d35.82839711090699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x130275759ac9d10d%3A0x698e3915682cef7d!2sSousse!5e0!3m2!1sfr!2stn!4v1704737796796!5m2!1sfr!2stn" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="100px" height="500px"  loading="lazy"></iframe>
+
+            <form action="">
+                <h3>Contact</h3>
+                <div class="inputBox">
+                    <span class="fas fa-user"></span>
+                    <input type="text" placeholder="nom" id="nom">
+                </div>
+                <div class="inputBox">
+                    <span class="fas fa-envelope"></span>
+                    <input type="email" placeholder="email">
+                </div>
+                <div class="inputBox">
+                    <span class="fas fa-phone"></span>
+                    <input type="number" placeholder="tel">
+                </div>
+                <input type="submit" value="contact now" class="btn" onclick="afficherMessage()">
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- contact section ends -->
+
+  
+    
+    <!--audio/video-->
+    <div class="video-container">
+    <iframe  width="100%" height="600"  src="videos/Pub parfum Idôle de Lancôme avec Zendaya.mp4"  allowfullscreen></iframe>
+    </div>
+
+   
+    <audio class="hidden-audio" autoplay >
+        <source src="audio/musicdouce.mp3" type="audio/mp3"></audio>
+
+       <!--marques--> 
+       <!-- Carrousel d'images de marques -->
+       <div class="title-container">
+        <h1 style="margin-top: 20px; margin-bottom: 20px; font-size: 40px;">Nos marques</h1>
+    </div>
+       <div class="carousel-container1">
+        <div class="carousel-slide">
+            <img src="images/12-small_default.jpg" style="width: 200px;" alt="Image 1" >
+        </div>
+        <div class="carousel-slide">
+            <img src="images/53-small_default.jpg" style="width: 200px;"alt="Image 2">
+        </div>
+        <div class="carousel-slide">
+            <img src="images/65-small_default.jpg"style="width: 200px;" alt="Image 3" >
+        </div>
+        <div class="carousel-slide">
+            <img src="images/82-small_default.jpg" style="width: 200px;"alt="Image 4" >
+        </div>
+        <div class="carousel-slide">
+            <img src="images/173-small_default.jpg" style="width: 200px;"alt="Image 5" >
+        </div>
+        <div class="carousel-slide">
+            <img src="images/276-small_default.jpg" style="width: 200px;"alt="Image 6" >
+        </div>
+        <div class="carousel-slide">
+            <img src="images/436-small_default.jpg"style="width: 200px;" alt="Image 7" >
+        </div>
+    </div>
+
+
+    <section>
+        <div class="container">
+            <div class="blackfriday">
+                <div class="blackfriday_content">   
+                   <div class="blackfirday_btn">
+                       
+                    <div class="btn-group">
+  
+                        <button>PARFUM >></button>
+                      </div>
+                    </div>
+                    <div class="blackfirday_btn">
+                       
+                        <div class="btn-group">
+      
+                            <button>MAQUILLAGE >></button>
+                          </div>
+                        </div>
+                        <div class="blackfirday_btn">
+                       
+                            <div class="btn-group">
+          
+                                <button>NOS SOIN >></button>
+                              </div>
+                            </div>
+ 
+                </div>
+                <div class="imgg">
+                    <img src="images/black2.jpg" alt="" width="49.9%">
+                    <img src="images/black3.jpg" alt="" width="49.8%">
+                </div>
+                <button class="button"><span>VOIR TOUTES LES OFFRES </span></button>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- liv pai -->
+    
+    <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-3">
+            <div class="theme-blocks-footerBefore theme-block icon my-2" id="theme-block-6">
+              <div class="block-content">
+                <a class="block-link d-flex flex-column align-items-center justify-content-center text-center py-2 py-md-3" href="https://cosmetique.tn/content/1-politique-de-livraison-cosmetiquetn">
+                  <i class="fas fa-truck text-primary mb-1" aria-hidden="true"></i>
+                  <div class="block-text">
+                    <p class="block-title h2 mb-0">Livraison gratuite</p>
+                    <p class="block-description">Livraison à 7 DT et gratuite à partir de 99 DT</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+      
+          <div class="col-12 col-md-3">
+            <div class="theme-blocks-footerBefore theme-block icon my-2" id="theme-block-7">
+              <div class="block-content">
+                <a class="block-link d-flex flex-column align-items-center justify-content-center text-center py-2 py-md-3" href="https://cosmetique.tn/content/2-politique-de-confidentialite">
+                  <i class="fas fa-lock text-primary mb-1" aria-hidden="true"></i>
+                  <div class="block-text">
+                    <p class="block-title h2 mb-0">Paiement sécurisé</p>
+                    <p class="block-description">Paiement 100% sécurisé</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+      
+          <div class="col-12 col-md-3">
+            <div class="theme-blocks-footerBefore theme-block icon my-2" id="theme-block-8">
+              <div class="block-content">
+                <a class="block-link d-flex flex-column align-items-center justify-content-center text-center py-2 py-md-3" href="https://cosmetique.tn/content/5-politique-de-retour">
+                  <i class="fas fa-exchange-alt text-primary mb-1" aria-hidden="true"></i>
+                  <div class="block-text">
+                    <p class="block-title h2 mb-0">Garantie satisfaction</p>
+                    <p class="block-description">Garantie satisfaction</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+      
+          <div class="col-12 col-md-3">
+            <div class="theme-blocks-footerBefore theme-block icon my-2" id="theme-block-9">
+              <div class="block-content">
+                <a class="block-link d-flex flex-column align-items-center justify-content-center text-center py-2 py-md-3" href="https://cosmetique.tn/nous-contacter">
+                  <i class="fas fa-mobile-alt text-primary mb-1" aria-hidden="true"></i>
+                  <div class="block-text">
+                    <p class="block-title h2 mb-0">Service client</p>
+                    <p class="block-description">Du lundi au vendredi de 8h30 à 18h</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    
+    <!-- footer section starts  -->
+
+    <section class="footer">
+
+        <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+            <a href="#" class="fab fa-pinterest"></a>
+        </div>
+
+        <ul class="links">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">À propos</a></li>
+            
+            <li><a href="#">products</a></li>
+            
+            <li><a href="#">Contactez-nous</a></li>>
+            
+        </ul>
+       
+        <div class="credit"> Développé par  <span>Shaima & Imen</span> | Copyright © 2023</div>
+
+    </section>
+
+    <!-- footer section ends -->
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+   <script>
+     let searchForm = document.querySelector('.search-form');
+    document .querySelector('#search-btn').onclick = () =>{
+    searchForm.classList.toggle('active');}
+
+    let loginForm = document.querySelector('.login-form');
+    document .querySelector('#login-btn').onclick = () =>{
+    loginForm.classList.toggle('active');}
+
+   </script>
+
+</body>
+
+</html>
